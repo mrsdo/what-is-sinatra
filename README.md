@@ -89,6 +89,14 @@ Puma starting in single mode...
 Use Ctrl-C to stop
 ```
 
+If you are running Ruby version 2.6.1 or another similar version of Ruby, you'll see something such as:
+
+```
+[2019-09-23 13:29:58] INFO  WEBrick 1.4.2
+[2019-09-23 13:29:58] INFO  ruby 2.6.1 (2019-01-30) [x86_64-darwin17]
+[2019-09-23 13:29:58] INFO  WEBrick::HTTPServer#start: pid=82970 port=9292
+```
+
 >Note: If you're using the Learn IDE, that last line will look more like this: `Listening on 192.241.134.186:30000, CTRL+C to stop` and you'll have to navigate to the address shown (in this case: `192.241.134.186:30000`) to see your site!
 
 This is telling us that Sinatra has started a web application running on your computer listening to HTTP requests at port `9292`, the Sinatra default. If you start this application and navigate to http://localhost:9292 you'll see "Hello, World!" in your browser. Go back to your terminal running the Sinatra application and stop it by typing `CTRL+C`. You should see:
@@ -101,6 +109,13 @@ Use Ctrl-C to stop
 - Goodbye!
 [00:01:11] (wip-lesson) what-is-sinatra
 $
+```
+
+and for version 2.6.1 and similar versions you should see:
+
+```
+[2019-09-23 13:53:27] INFO  going to shutdown ...
+[2019-09-23 13:53:27] INFO  WEBrick::HTTPServer#start done.
 ```
 
 This is the most basic Sinatra application structure and is actually pretty uncommon. More commonly, Sinatra is used in a modular style encapsulated by Controller Classes and booted via the `config.ru` Rack convention.
