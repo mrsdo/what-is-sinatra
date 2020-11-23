@@ -65,6 +65,7 @@ First, make sure Sinatra is installed by running `gem install sinatra` in your t
 The simplest Sinatra application would be:
 
 File: `app.rb`
+
 ```ruby
 require 'sinatra'
 
